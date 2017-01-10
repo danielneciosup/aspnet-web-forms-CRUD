@@ -32,3 +32,4 @@ F:\Proyectos\ASP.NET\EmployeeCRUD\EmployeeCRUD\bin\Microsoft.CodeDom.Providers.D
 F:\Proyectos\ASP.NET\EmployeeCRUD\EmployeeCRUD\bin\Npgsql.xml
 F:\Proyectos\ASP.NET\EmployeeCRUD\EmployeeCRUD\obj\Debug\EmployeeCRUD.dll
 F:\Proyectos\ASP.NET\EmployeeCRUD\EmployeeCRUD\obj\Debug\EmployeeCRUD.pdb
+F:\Proyectos\ASP.NET\EmployeeCRUD\EmployeeCRUD\obj\Debug\EmployeeCRUD.csprojResolveAssemblyReference.cache

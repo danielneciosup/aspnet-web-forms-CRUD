@@ -16,27 +16,24 @@
                </td>
            </tr>
            <tr>
+               <td>Employee ID</td>
+               <td>:</td>
+               <td>
+                   <asp:TextBox ID="txtEmpID" runat="server"></asp:TextBox>
+               </td>
+           </tr>
+           <tr>
                <td>Employee First Name</td>
                <td>:</td>
                <td>
                    <asp:TextBox ID="txtEmpFN" runat="server"></asp:TextBox>
-                   <asp:RequiredFieldValidator ID ="requiredFieldFN" runat="server"
-                       ControlToValidate="txtEmpFN"
-                       ErrorMessage="Nombres requeridos"
-                       ForeColor="Red">
-                   </asp:RequiredFieldValidator>
                </td>
            </tr>
            <tr>
                <td>Employee Last Name</td>
                <td>:</td>
                <td>
-                   <asp:TextBox ID="txtEmpLN" runat="server"></asp:TextBox>
-                   <asp:RequiredFieldValidator ID ="requiredFieldLN" runat="server"
-                       ControlToValidate="txtEmpLN"
-                       ErrorMessage="Nombres requeridos"
-                       ForeColor="Red">
-                   </asp:RequiredFieldValidator>
+                   <asp:TextBox ID="txtEmpLN" runat="server"></asp:TextBox>                   
                </td>
            </tr>
            <tr>
@@ -44,16 +41,13 @@
                <td>:</td>
                <td>
                    <asp:TextBox ID="txtEmpEmail" runat="server"></asp:TextBox>
-                   <asp:RequiredFieldValidator ID="requiredFieldEmail" runat="server"
-                       ControlToValidate="txtEmpEmail"
-                       ErrorMessage="Email requerido"
-                       ForeColor="Red">
-                   </asp:RequiredFieldValidator>
+                   
                </td>
            </tr>
            <tr>
                <td colspan="2">
                    <asp:Button ID="btnInsercion" runat="server" Text="Insertar" OnClick="btnInsercion_Click" Width="59px"/>
+                   <asp:Button ID="btnUpdate" runat="server" Text="Actualizar" OnClick="btnUpdate_Click"/>
                    <asp:Label ID="lblmsg" runat="server" ForeColor="Red"></asp:Label>
                </td>
            </tr>

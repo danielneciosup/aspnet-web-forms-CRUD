@@ -22,6 +22,15 @@ namespace EmployeeCRUD {
         protected global::System.Web.UI.HtmlControls.HtmlForm frmInsert;
         
         /// <summary>
+        /// Control txtEmpID.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtEmpID;
+        
+        /// <summary>
         /// Control txtEmpFN.
         /// </summary>
         /// <remarks>
@@ -29,15 +38,6 @@ namespace EmployeeCRUD {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtEmpFN;
-        
-        /// <summary>
-        /// Control requiredFieldFN.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator requiredFieldFN;
         
         /// <summary>
         /// Control txtEmpLN.
@@ -49,15 +49,6 @@ namespace EmployeeCRUD {
         protected global::System.Web.UI.WebControls.TextBox txtEmpLN;
         
         /// <summary>
-        /// Control requiredFieldLN.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator requiredFieldLN;
-        
-        /// <summary>
         /// Control txtEmpEmail.
         /// </summary>
         /// <remarks>
@@ -67,15 +58,6 @@ namespace EmployeeCRUD {
         protected global::System.Web.UI.WebControls.TextBox txtEmpEmail;
         
         /// <summary>
-        /// Control requiredFieldEmail.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator requiredFieldEmail;
-        
-        /// <summary>
         /// Control btnInsercion.
         /// </summary>
         /// <remarks>
@@ -83,6 +65,15 @@ namespace EmployeeCRUD {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnInsercion;
+        
+        /// <summary>
+        /// Control btnUpdate.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnUpdate;
         
         /// <summary>
         /// Control lblmsg.

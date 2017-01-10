@@ -69,5 +69,36 @@ namespace EmployeeCRUD
                 Console.WriteLine(exception.Message);
             }
         }
+
+        protected void btnUpdate_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                using (NpgsqlConnection connection = new NpgsqlConnection())
+                {
+                    connection.ConnectionString = ConfigurationManager.ConnectionStrings["connectionStrings"].ToString();
+                    connection.Open();
+                    NpgsqlCommand command = new NpgsqlCommand();
+                    command.Connection = connection;
+                    command.CommandText = "UPDATE employee SET firstname = @fName, lastname = @lName, emailid = @Email WHERE id = @Id";
+                    command.CommandType = CommandType.Text;
+                    command.Parameters.Add(new NpgsqlParameter("@Id", int.Parse( txtEmpID.Text.ToString() )));
+                    command.Parameters.Add(new NpgsqlParameter("@fName", txtEmpFN.Text));
+                    command.Parameters.Add(new NpgsqlParameter("@lName", txtEmpLN.Text));
+                    command.Parameters.Add(new NpgsqlParameter("@Email", txtEmpEmail.Text));
+                    command.ExecuteNonQuery();
+                    command.Dispose();
+                    connection.Close();
+                    txtEmpFN.Text = "";
+                    txtEmpLN.Text = "";
+                    txtEmpEmail.Text = "";
+                    lblmsg.Text = "Data Has been Updated";
+                }
+            }
+            catch (Exception exception)
+            {
+                Console.WriteLine(exception.Message);
+            }
+        }
     }
 }
