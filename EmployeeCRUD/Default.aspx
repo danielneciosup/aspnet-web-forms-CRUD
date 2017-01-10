@@ -72,6 +72,28 @@
                </td>
            </tr>
        </table>
+       
+        <hr />
+        <table>
+            <tr>
+                <td colspan="3">
+                    <h1>Deletion</h1>
+                </td>
+            </tr>
+            <tr>
+                <td>Employee ID</td>
+                <td>:</td>
+                <td>
+                    <asp:TextBox ID="txtEmployeeID" runat="server"></asp:TextBox>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="3">
+                    <asp:Button ID="btnDelete" runat="server" Text="Eliminar" OnClick="btnDelete_Click"/>
+                    <asp:Label ID="lblMessageDelete" runat="server" ForeColor="Red"></asp:Label>
+                </td>
+            </tr>
+        </table>
     </form>
 </body>
 </html>

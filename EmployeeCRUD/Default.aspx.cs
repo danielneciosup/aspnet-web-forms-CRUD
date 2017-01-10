@@ -100,5 +100,31 @@ namespace EmployeeCRUD
                 Console.WriteLine(exception.Message);
             }
         }
+
+        protected void btnDelete_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                using (NpgsqlConnection connection = new NpgsqlConnection())
+                {
+                    connection.ConnectionString = ConfigurationManager.ConnectionStrings["connectionStrings"].ToString();
+                    connection.Open();
+                    NpgsqlCommand command = new NpgsqlCommand();
+                    command.Connection = connection;
+                    command.CommandText = "Delete from employee where id=@Id";
+                    command.CommandType = CommandType.Text;
+                    command.Parameters.Add(new NpgsqlParameter("@Id", int.Parse(txtEmployeeID.Text.ToString())));
+                    command.ExecuteNonQuery();
+                    command.Dispose();
+                    connection.Close();
+                    txtEmployeeID.Text = "";
+                    lblMessageDelete.Text = "Data Has been Deleted";
+                }
+            }
+            catch (Exception exception)
+            {
+                Console.WriteLine(exception.Message);
+            }
+        }
     }
 }
