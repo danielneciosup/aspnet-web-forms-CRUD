@@ -58,6 +58,26 @@
                </td>
            </tr>
        </table>
+       
+       <hr />       
+       
+       <table>
+           <tr>
+               <td>
+                   <h1>Selection</h1>
+               </td>
+           </tr>
+           <tr>
+               <td>
+                   <asp:Button ID="btnSelect" runat="server" Text="Select All Data" OnClick="btnSelect_Click"/>
+               </td>
+           </tr>
+           <tr>
+               <td>
+                   <asp:GridView ID="gvEmployes" runat="server"></asp:GridView>
+               </td>
+           </tr>
+       </table>
     </form>
 </body>
 </html>

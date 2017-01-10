@@ -41,5 +41,33 @@ namespace EmployeeCRUD
                 Console.WriteLine(exception.Message);
             }
         }
+
+        protected void btnSelect_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                using (NpgsqlConnection connection = new NpgsqlConnection())
+                {
+                    connection.ConnectionString = ConfigurationManager.ConnectionStrings["connectionStrings"].ToString();
+                    connection.Open();
+                    NpgsqlCommand command = new NpgsqlCommand();
+                    command.Connection = connection;
+                    command.CommandText = "SELECT * FROM employee";
+                    command.CommandType = CommandType.Text;
+                    NpgsqlDataAdapter dataAdapter = new NpgsqlDataAdapter(command);
+                    DataTable dataTable = new DataTable();
+                    dataAdapter.Fill( dataTable );
+                    command.Dispose();
+                    connection.Close();
+
+                    gvEmployes.DataSource = dataTable;
+                    gvEmployes.DataBind();
+                }
+            }
+            catch (Exception exception)
+            {
+                Console.WriteLine(exception.Message);
+            }
+        }
     }
 }
